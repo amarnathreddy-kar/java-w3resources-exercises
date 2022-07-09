@@ -1,4 +1,4 @@
-package w3resources;
+package w3resources.arrays;
 
 public class P02_ArrayExercise {
     //Sum and Average values of an array
