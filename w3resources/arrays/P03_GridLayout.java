@@ -1,4 +1,4 @@
-package w3resources;
+package w3resources.arrays;
 
 public class P03_GridLayout {
     public static void main(String[] args) {
