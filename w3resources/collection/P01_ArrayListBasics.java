@@ -1,6 +1,7 @@
 package w3resources.collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class P01_ArrayListBasics {
@@ -40,6 +41,16 @@ public class P01_ArrayListBasics {
         list_strings.set(0,"Crow Black");
         System.out.println("Updated List ");
         System.out.println(list_strings);
+
+        System.out.println();
+        System.out.println("Traversing list through iterator: ");
+        Iterator itr = list_strings.iterator();
+
+        while(itr.hasNext()){
+            System.out.print(itr.next()+" | ");
+        }
+
+
 
     }
 }
