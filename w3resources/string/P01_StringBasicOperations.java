@@ -23,11 +23,14 @@ public class P01_StringBasicOperations {
 
         //to convert a String to Char [] array:
         String string3 = "Convert this to a Char [] array";
-        //String string3 = "Java Exercices";
         char[] arr = string3.toCharArray();
         System.out.println("String3 (char [] arr): " + Arrays.toString(arr));
         System.out.println("The datatype of arr is: " + arr.getClass().getSimpleName());
         System.out.println("Total number of characters in a char [] arr (including blanks): " + arr.length);
+        System.out.println("IndexOf>>>>>>>> 'C' "+string3.indexOf("C"));
+        System.out.println("IndexOf>>>>>>>> 'v' "+string3.indexOf("v"));
+        System.out.println("IndexOf>>>>>>>> 'i' "+string3.indexOf("i"));
+        System.out.println("IndexOf>>>>>>>> 'z' "+string3.indexOf("z"));
 
         //to find the total char count with for loop
         int count = 0, total = 0;
@@ -177,11 +180,71 @@ public class P01_StringBasicOperations {
         longestSubstring("amarnathreddy");
 
         //print after removing duplicates from a given string
+        //Approach: 1. convert the str to ch[], 2. create an empty str (targetStr),
+        // 3. loop-thru the ch[], when a ch is not found then append to targetStr and 4. return the targetStr
+        System.out.println("After removing duplicate Chars from 'Hello' is: "+removeDuplicateChars("Hello"));
+        System.out.println("After removing duplicate Chars from 'Darwin' is: "+removeDuplicateChars("Darwin"));
+        System.out.println("After removing duplicates Chars from 'Amarnath Reddy' is: "+removeDuplicateChars("Amarnath Reddy"));
+
+        //find first non repeating character in a string.
+        String string20 = "Amarnath";
+        System.out.println("The string20 = "+string20);
+
+        for(int i =0; i<string20.length();i++){
+            boolean isUnique = true;
+            for(int j=0; j<string20.length();j++){
+                if(i!=j && string20.toLowerCase().charAt(i) == string20.toLowerCase().charAt(j)){
+                    isUnique = false;
+                    break;
+                }
+            }
+            if(isUnique){
+                System.out.println("The first non-repeated char in given string is: "+string20.charAt(i));
+                break;
+            }
+        }
+
+        //program to divide a string in n equal parts.
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+    private static String removeDuplicateChars(String sourceStr){
+        char[] charArr = sourceStr.toCharArray();
+        String targetStr = "";
+
+        for (char ch: charArr){
+            if(targetStr.toLowerCase().indexOf(ch) == -1){ //fixed a bug w.r.t Initial capitalization
+                targetStr= targetStr+ch;
+            }
+        }
+        return targetStr;
     }
 
     static void longestSubstring(String inputString) {
