@@ -169,7 +169,7 @@ public class P01_StringBasicOperations {
             The longest substring : [M, i, c, r, o, s]
             The longest Substring Length : 6 */
 
-        //the solution/ method is at line: 181 (outside of main block)
+        //the solution/ method is outside of main block
 
         longestSubstring("pickoutthelongestsubstring");
         longestSubstring("ppppppppppppp");
